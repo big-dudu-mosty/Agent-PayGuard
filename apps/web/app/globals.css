@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-lg border border-line bg-white p-5 shadow-sm;
+  }
+
+  .section-title {
+    @apply text-base font-semibold text-ink;
+  }
+
+  .input {
+    @apply w-full rounded border border-line bg-white px-3 py-2 text-sm text-ink outline-none transition focus:border-ink;
+  }
+
+  .btn-primary {
+    @apply rounded bg-ink px-3 py-2 text-sm font-medium text-white transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply rounded border border-line bg-white px-3 py-2 text-sm font-medium text-ink transition hover:bg-panel disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-danger {
+    @apply rounded border border-red-300 bg-white px-3 py-2 text-sm font-medium text-red-700 transition hover:bg-red-50 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .link {
+    @apply text-ink underline decoration-gray-300 underline-offset-4 hover:decoration-ink;
+  }
+}

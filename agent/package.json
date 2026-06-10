@@ -1,0 +1,23 @@
+{
+  "name": "@agent-payguard/agent",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "pay": "tsx src/pay.ts",
+    "demo": "tsx src/demo-agent.ts",
+    "skill": "tsx src/skill.ts",
+    "register-identity": "tsx src/register-identity.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "viem": "^2.23.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
+

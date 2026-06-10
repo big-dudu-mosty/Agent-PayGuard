@@ -1,0 +1,22 @@
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Foundry
+contracts/out/
+contracts/cache/
+broadcast/
+
+# Env
+.env
+.env.local
+.env.*.local
+agent/.env
+apps/web/.env.local
+
+# OS / editor
+.DS_Store
+*.swp

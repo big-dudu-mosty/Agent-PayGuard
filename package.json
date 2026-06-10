@@ -1,0 +1,19 @@
+{
+  "name": "agent-payguard",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/web",
+    "agent"
+  ],
+  "scripts": {
+    "test:contracts": "forge test",
+    "dev:web": "npm --workspace apps/web run dev",
+    "build:web": "npm --workspace apps/web run build",
+    "agent:pay": "npm --workspace agent run pay --",
+    "agent:demo": "npm --workspace agent run demo --",
+    "payguard": "npm --workspace agent run skill --",
+    "agent:register-identity": "npm --workspace agent run register-identity"
+  }
+}
+

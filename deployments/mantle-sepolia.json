@@ -1,0 +1,71 @@
+{
+  "network": "mantle-sepolia",
+  "chainId": 5003,
+  "contractVersion": "1.1.0",
+  "policyVault": "0xD87aDfa5E4b9d42c543233500464bE08369810CA",
+  "owner": "0xaE2F93A880550eDA852504e031ff3927981Df49B",
+  "agent": "0x8114D2D2D34F127741BC45A533EEf9D190F4dD43",
+  "recipient": "0x7024dA0eA6885441C4567E3CE92Be7CFcec2c9E4",
+  "maxPerTxWei": "1000000000000000000",
+  "dailyLimitWei": "10000000000000000000",
+  "initialVaultFundingWei": "2000000000000000000",
+  "deploymentTx": "0xcbe77f2c65b130b2bb2693146648e80340aca6d2c583858fb661540850745139",
+  "whitelistTx": "0x67da53b7cd31cacf1cfba1b2b24b00a51a1ba9a12bb7d15af615352143b338b1",
+  "fundingTx": "0xcfeb03c72a915483c11326bc736727a88547e2b17ed4759a1094526cb333b142",
+  "explorer": "https://sepolia.mantlescan.xyz/address/0xD87aDfa5E4b9d42c543233500464bE08369810CA",
+  "deployedAt": "2026-06-10T09:15:00+08:00",
+  "v11Changes": ["ownerWithdraw", "isAllowedFor"],
+  "erc8004": {
+    "identityRegistry": "0x8004A3718bD35CF767BC0E718bf21Ec4073502f0",
+    "agentId": "2",
+    "registrationTx": "0x1e55c83cdac49b875fab7b62665d84c21a6a634920e5fd7c8c730f7f248d37a1"
+  },
+  "demoSuccessTx": "0x67fc9116866a7ca29f8c4b95b8ef9d449f8a88a951533849690958088efdc51a",
+  "demoSuccessAmountWei": "10000000000000000",
+  "llmDemoSuccessTx": "0x3c9563288f77503205bce3d565bbbc35cc18ee94d1db60ef37bb2225ebdd2444",
+  "llmInjectionBlocked": {
+    "sample": "agent/samples/injection-invoice.txt",
+    "llmParsedIntent": { "to": "0x000000000000000000000000000000000000dEaD", "amountWei": "2000000000000000000" },
+    "blockedAt": "precheck",
+    "reason": "NOT_WHITELISTED"
+  },
+  "onchainRevertEvidence": [
+    {
+      "name": "exceeds per transaction limit (forced past SDK precheck)",
+      "tx": "0x62934c1e4d156b94ec31ee0d8aaee154a011e45a97bc3b22e90a9a1074923cbe",
+      "recipient": "0x7024dA0eA6885441C4567E3CE92Be7CFcec2c9E4",
+      "amountWei": "2000000000000000000",
+      "revertError": "ExceedsMaxPerTx"
+    },
+    {
+      "name": "recipient not whitelisted (forced past SDK precheck)",
+      "tx": "0x07aa11208884285eb7c6e93e0b36990e33887fb30511a4670b04fde957555a06",
+      "recipient": "0x000000000000000000000000000000000000dEaD",
+      "amountWei": "10000000000000000",
+      "revertError": "RecipientNotWhitelisted"
+    }
+  ],
+  "precheckRejectedCases": [
+    {
+      "name": "exceeds per transaction limit",
+      "recipient": "0x7024dA0eA6885441C4567E3CE92Be7CFcec2c9E4",
+      "amountWei": "2000000000000000000",
+      "reason": "EXCEEDS_PER_TX"
+    },
+    {
+      "name": "recipient not whitelisted",
+      "recipient": "0x000000000000000000000000000000000000dEaD",
+      "amountWei": "10000000000000000",
+      "reason": "NOT_WHITELISTED"
+    }
+  ],
+  "previousDeployments": [
+    {
+      "contractVersion": "1.0.0",
+      "policyVault": "0xF98cf6aBF2cB7456A707e05bFee7568Cb8a096B3",
+      "deploymentTx": "0x3ce6106addfa9718989a6443cb13509e0330dc1c923f6245ce6cdc0c55a6cf4b",
+      "demoSuccessTx": "0x95d67d3720cbc59ca33285bd4002a39dcc0354bef150d92afd353dcd20cb5a4e",
+      "deployedAt": "2026-06-09T11:11:29+08:00"
+    }
+  ]
+}
