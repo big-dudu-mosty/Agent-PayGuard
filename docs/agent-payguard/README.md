@@ -30,6 +30,7 @@
 | [07-development-plan.md](./07-development-plan.md) | 开发任务拆解、3-5 天 MVP 排期、1-2 周进阶计划 | 7 |
 | [08-demo-pitch-risk-testing.md](./08-demo-pitch-risk-testing.md) | 测试用例、2 分钟 Demo、3 分钟 Pitch、风险与降级方案 | 8 |
 | [09-hackathon-alignment.md](./09-hackathon-alignment.md) | **当前需求基准**：赛道选择、评审映射、需求变更 R1-R7、5 天冲刺排期、提交清单 | **0（先读这个）** |
+| [10-submission-materials.md](./10-submission-materials.md) | 提交材料成品：X Thread 文案、3 分钟 Pitch 讲稿、Demo 录制分镜、提交清单 | 9 |
 
 ## 建议代码目录
 

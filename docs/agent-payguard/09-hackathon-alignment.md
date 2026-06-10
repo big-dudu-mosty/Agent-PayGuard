@@ -58,7 +58,7 @@
 | R4 ERC-8004 | **完成（最小集成）** | Agent 已注册 Mantle 官方 IdentityRegistry（`0x8004A371...02f0`），**Agent ID 2**，注册文件内嵌 PolicyVault 地址与 `guarded_mnt_payment` 技能：[tx](https://sepolia.mantlescan.xyz/tx/0x1e55c83cdac49b875fab7b62665d84c21a6a634920e5fd7c8c730f7f248d37a1) |
 | R5 合约 v1.1 + 重新部署 | **完成** | [`0xD87a...10CA`](https://sepolia.mantlescan.xyz/address/0xD87aDfa5E4b9d42c543233500464bE08369810CA)，24 测试全绿 |
 | R6 链上 revert 证据 | **完成** | [ExceedsMaxPerTx](https://sepolia.mantlescan.xyz/tx/0x62934c1e4d156b94ec31ee0d8aaee154a011e45a97bc3b22e90a9a1074923cbe)、[RecipientNotWhitelisted](https://sepolia.mantlescan.xyz/tx/0x07aa11208884285eb7c6e93e0b36990e33887fb30511a4670b04fde957555a06) |
-| R7 提交材料 | 未开始 | - |
+| R7 提交材料 | **文案完成，待执行** | [10 文档](./10-submission-materials.md)：X Thread（7 条）、Pitch 讲稿、Demo 分镜、提交清单均已成稿；待办：录视频、发 Thread、DoraHacks 表单 |
 | 前端对齐（isAllowedFor / Withdraw） | **完成** | Simulator 改用 `isAllowedFor`（任意钱包可模拟）；Vault Setup 面板新增 Owner Withdraw；`next build` 通过 |
 
 ## 需求变更清单（v2 范围）

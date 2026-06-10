@@ -3,7 +3,7 @@ name: payguard
 description: "Agent PayGuard: guarded native MNT payments on Mantle through an on-chain PolicyVault. Check vault policy/budget, precheck payments, and execute payments that are enforced by per-transaction limits, daily limits and a recipient whitelist. Use when an agent needs to pay for APIs, services, subscriptions or bounties on Mantle without holding the owner's funds."
 metadata:
   openclaw:
-    homepage: https://github.com/your-org/agent-payguard
+    homepage: https://github.com/big-dudu-mosty/Agent-PayGuard
     requires:
       config:
         - agent/.env (AGENT_PRIVATE_KEY, VAULT_ADDRESS, MANTLE_SEPOLIA_RPC)
