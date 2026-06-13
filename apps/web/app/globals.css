@@ -10,10 +10,15 @@
   box-sizing: border-box;
 }
 
+html {
+  background: #f6f9fb;
+}
+
 body {
   margin: 0;
-  background: #f3f4f6;
-  color: #111827;
+  background: #f6f9fb;
+  color: #0f172a;
+  letter-spacing: 0;
 }
 
 button,
@@ -23,32 +28,151 @@ textarea {
   font: inherit;
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 @layer components {
-  .panel {
-    @apply rounded-lg border border-line bg-white p-5 shadow-sm;
+  .surface {
+    @apply rounded-lg border border-line bg-white shadow-[0_12px_36px_rgba(15,23,42,0.045)];
   }
 
-  .section-title {
-    @apply text-base font-semibold text-ink;
+  .overview-shell {
+    @apply rounded-lg border border-brandSky/10 bg-[#edf7fa] p-3 shadow-[0_18px_54px_rgba(14,145,184,0.07)] sm:p-4;
+  }
+
+  .page-intro {
+    @apply border-b border-line pb-7;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-muted;
+  }
+
+  .metric-grid {
+    @apply grid gap-3 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .metric-tile {
+    @apply min-h-28 rounded-lg border border-line bg-white p-4 shadow-[0_8px_24px_rgba(15,23,42,0.035)];
   }
 
   .input {
-    @apply w-full rounded border border-line bg-white px-3 py-2 text-sm text-ink outline-none transition focus:border-ink;
+    @apply h-10 w-full rounded-md border border-line bg-white px-3 text-sm text-ink outline-none transition placeholder:text-slate-400 focus:border-brandSky focus:ring-2 focus:ring-brandSky/10;
   }
 
   .btn-primary {
-    @apply rounded bg-ink px-3 py-2 text-sm font-medium text-white transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-50;
+    @apply inline-flex h-10 items-center justify-center gap-2 rounded-md bg-ink px-4 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-45;
   }
 
   .btn-secondary {
-    @apply rounded border border-line bg-white px-3 py-2 text-sm font-medium text-ink transition hover:bg-panel disabled:cursor-not-allowed disabled:opacity-50;
+    @apply inline-flex h-10 items-center justify-center gap-2 rounded-md border border-line bg-white px-4 text-sm font-semibold text-ink transition hover:border-brandSky/40 hover:bg-panel disabled:cursor-not-allowed disabled:opacity-45;
   }
 
   .btn-danger {
-    @apply rounded border border-red-300 bg-white px-3 py-2 text-sm font-medium text-red-700 transition hover:bg-red-50 disabled:cursor-not-allowed disabled:opacity-50;
+    @apply inline-flex h-10 items-center justify-center gap-2 rounded-md border border-red-200 bg-white px-4 text-sm font-semibold text-red-600 transition hover:bg-red-50 disabled:cursor-not-allowed disabled:opacity-45;
   }
 
-  .link {
-    @apply text-ink underline decoration-gray-300 underline-offset-4 hover:decoration-ink;
+  .text-button {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-brandSky transition hover:text-brandSky/75;
+  }
+
+  .icon-button,
+  .icon-link {
+    @apply inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-line bg-white text-muted transition hover:border-brandSky/40 hover:text-brandSky disabled:cursor-not-allowed disabled:opacity-45;
+  }
+
+  .icon-box {
+    @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-line bg-panel;
+  }
+
+  .wallet-button {
+    @apply inline-flex h-10 items-center gap-2 rounded-full border border-line bg-white px-3 text-sm font-semibold text-ink shadow-[0_8px_24px_rgba(15,23,42,0.05)] transition hover:border-brandSky/40;
+  }
+
+  .status-dot {
+    @apply h-2 w-2 rounded-full bg-brandMint shadow-[0_0_0_4px_rgba(22,156,120,0.1)];
+  }
+
+  .nav-pill {
+    @apply inline-flex h-10 shrink-0 items-center gap-2 rounded-full border border-line bg-white px-4 text-sm font-semibold text-slate-600 transition hover:border-brandSky/40 hover:text-brandSky;
+  }
+
+  .nav-pill-active {
+    @apply border-brandSky/30 bg-[#eef9fc] text-brandSky shadow-[0_6px_18px_rgba(14,145,184,0.08)];
+  }
+
+  .language-button {
+    @apply rounded-full px-2.5 py-1.5 text-xs font-semibold text-muted transition hover:text-ink;
+  }
+
+  .language-button-active {
+    @apply bg-white text-ink shadow-sm;
+  }
+
+  .status-pill {
+    @apply inline-flex max-w-full items-center gap-1.5 rounded-full border px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.1em];
+  }
+
+  .status-success {
+    @apply border-emerald-200 bg-emerald-50 text-emerald-700;
+  }
+
+  .status-warning {
+    @apply border-amber-200 bg-amber-50 text-amber-700;
+  }
+
+  .status-danger {
+    @apply border-red-200 bg-red-50 text-red-600;
+  }
+
+  .status-info {
+    @apply border-brandSky/20 bg-[#eff9fc] text-brandSky;
+  }
+
+  .step-number {
+    @apply inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-brandSky/20 bg-[#eff9fc] font-mono text-[11px] font-medium text-brandSky;
+  }
+
+  .decision-panel {
+    @apply rounded-lg border border-line bg-white p-5 shadow-[0_12px_36px_rgba(15,23,42,0.045)] sm:p-6;
+  }
+
+  .decision-allowed {
+    @apply border-emerald-200 bg-emerald-50/25;
+  }
+
+  .decision-rejected {
+    @apply border-red-200 bg-red-50/30;
+  }
+
+  .decision-icon {
+    @apply inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-line bg-white;
+  }
+
+  .notice-success {
+    @apply border-emerald-200 bg-emerald-50 text-emerald-800;
+  }
+
+  .notice-error {
+    @apply border-red-200 bg-red-50 text-red-700;
+  }
+
+  .notice-info {
+    @apply border-brandSky/20 bg-[#eff9fc] text-brandSky;
+  }
+}
+
+@media (max-width: 430px) {
+  .nav-pill {
+    @apply h-9 gap-1 px-2 text-xs;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }

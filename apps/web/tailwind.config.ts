@@ -8,11 +8,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#111827",
-        muted: "#6b7280",
-        line: "#d1d5db",
-        panel: "#f8fafc",
+        app: "#f6f9fb",
+        ink: "#0f172a",
+        muted: "#64748b",
+        line: "#dce7ed",
+        panel: "#f4f8fa",
+        brandSky: "#0e91b8",
+        brandMint: "#169c78",
+        danger: "#e85b61",
         mantle: "#00d395",
+      },
+      fontFamily: {
+        body: ["var(--font-manrope)", "sans-serif"],
+        display: ["var(--font-space-grotesk)", "sans-serif"],
+        mono: ["var(--font-ibm-plex-mono)", "monospace"],
       },
     },
   },
@@ -20,4 +29,3 @@ const config: Config = {
 };
 
 export default config;
-
